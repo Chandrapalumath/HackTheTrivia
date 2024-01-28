@@ -57,6 +57,25 @@ form button:hover {
 }
 </style>
 <body>
+
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img src="logo.jpg" height="45px" width="45px"    alt="logo">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            <span class="fs-4">TranquilLife hospital</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="Contactus.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="Aboutus.html" class="nav-link">About</a></li>
+          </ul>
+        </header>
+      </div>
     <div class="container">
         <h1 id="doc">Appointment Scheduling with </h1>
         <form>
@@ -76,11 +95,19 @@ form button:hover {
             <input type="time" id="time" name="time"> -->
             <label for="reason">Reason for Visit:</label>
             <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
-            <button type="submit" onclick="submitall()">Schedule Appointment</button>
+            <button type="submit" onclick="submitall()"><a href="show.html">Schedule Appointment</a></button>
         </form>
     </div>
-  <script src="book.js">
-    
-  </script>
+    <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString); // Move this line up
+
+            const buttonValue1 = urlParams.get('buttonValue');
+            var a = document.getElementById('doc');
+            a.innerHTML += buttonValue1;
+
+
+    </script>
+  <script src="book.js"></script>
 </body>
 </html>
