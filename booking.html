@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Page</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form select,
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+</style>
+<body>
+    <div class="container">
+        <h1 id="doc">Appointment Scheduling with </h1>
+        <form>
+            <label for="date">Name:</label>
+            <input type="text" id="name" name="date">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="date">
+            <label for="date">Mobile Number:</label>
+            <input type="text" id="mob" name="date">
+            <label for="date">Aadhar Number:</label>
+            <input type="text" id="Adnum" name="date">
+            <label for="add">Address:</label>
+            <textarea id="add" name="add" rows="4" cols="50"></textarea>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <!-- <label for="time">Time:</label>
+            <input type="time" id="time" name="time"> -->
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
+            <button type="submit" onclick="submitall()">Schedule Appointment</button>
+        </form>
+    </div>
+  <script src="book.js">
+    
+  </script>
+</body>
+</html>

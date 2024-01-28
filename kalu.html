@@ -1,0 +1,31 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Scheduling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Appointment Scheduling</h1>
+        <form action="schedule.php" method="POST">
+            <label for="doctor">Select Doctor:</label>
+            <select id="doctor" name="doctor">
+                <option value="1">Dr. Smith (Cardiologist)</option>
+                <option value="2">Dr. Johnson (Dermatologist)</option>
+                <!-- Add more options for other doctors -->
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+            <label for="reason">Reason for Visit:</label>
+            <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
+            <button type="submit">Schedule Appointment</button>
+        </form>
+    </div>
+</body>
+</html>
