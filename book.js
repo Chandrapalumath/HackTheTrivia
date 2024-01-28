@@ -15,8 +15,6 @@ const client = new Client({
 });
 
 client.connect();
-
-// Function to create the patientinfo table
 function createTable() {
     const createTableQuery = `
         CREATE TABLE IF NOT EXISTS patientinfo (
@@ -46,11 +44,10 @@ function submitall() {
     var name = document.getElementById('name').value;
     var age = document.getElementById('age').value;
     var mobile = document.getElementById('mob').value;
-    var add = document.getElementById('Adnum').value;
-    var aad = document.getElementById('add').value;
+    var aad = document.getElementById('Adnum').value;
+    var add = document.getElementById('add').value;
     var date = document.getElementById('date').value;
     var reason = document.getElementById('reason').value;
-    alert(name + mobile + add + aad + date + reason);
 
     const insertQuery = `
         INSERT INTO patientinfo (name, age, aadhar, mobile, address, d, reason)
@@ -65,13 +62,14 @@ function submitall() {
         }
     });
 
-    const selectQuery = "SELECT * FROM users";
+    const selectQuery = "SELECT * FROM patientinfo"; // Corrected table name
     client.query(selectQuery, (err, res) => {
         if (err) {
-            console.error("Error querying users:", err);
+            console.error("Error querying patientinfo:", err);
         } else {
             console.log("User data", res.rows);
         }
     });
 }
+export { submitall };
 

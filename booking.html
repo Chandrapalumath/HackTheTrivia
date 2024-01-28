@@ -56,31 +56,36 @@ form button:hover {
     background-color: #45a049;
 }
 </style>
+
+<script type="module" src="./book.js"></script>
+
 <body>
     <div class="container">
         <h1 id="doc">Appointment Scheduling with </h1>
         <form>
-            <label for="date">Name:</label>
-            <input type="text" id="name" name="date">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
             <label for="age">Age:</label>
-            <input type="text" id="age" name="date">
-            <label for="date">Mobile Number:</label>
-            <input type="text" id="mob" name="date">
-            <label for="date">Aadhar Number:</label>
-            <input type="text" id="Adnum" name="date">
+            <input type="text" id="age" name="age">
+
+            <label for="mob">Mobile Number:</label>
+            <input type="text" id="mob" name="mobile">
+
+            <label for="Adnum">Aadhar Number:</label>
+            <input type="text" id="Adnum" name="aadhar">
+
             <label for="add">Address:</label>
-            <textarea id="add" name="add" rows="4" cols="50"></textarea>
+            <textarea id="add" name="address" rows="4" cols="50"></textarea>
+
             <label for="date">Date:</label>
             <input type="date" id="date" name="date">
-            <!-- <label for="time">Time:</label>
-            <input type="time" id="time" name="time"> -->
+
             <label for="reason">Reason for Visit:</label>
             <textarea id="reason" name="reason" rows="4" cols="50"></textarea>
-            <button type="submit" onclick="submitall()">Schedule Appointment</button>
+
+            <button type="button" onclick="submitall()">Schedule Appointment</button>
         </form>
     </div>
-  <script src="book.js">
-    
-  </script>
 </body>
 </html>
